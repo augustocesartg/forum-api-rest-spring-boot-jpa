@@ -1,11 +1,12 @@
 package com.augustogiacomini.forum.controller.dto;
 
 import com.augustogiacomini.forum.modelo.Topico;
+import lombok.Getter;
+import org.springframework.data.domain.Page;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
 
+@Getter
 public class TopicoDto {
 
     private Long id;
@@ -20,19 +21,7 @@ public class TopicoDto {
         this.dataCriacao = topico.getDataCriacao();
     }
 
-    public static List<TopicoDto> converter(List<Topico> topicos) {
-        return topicos.stream().map(TopicoDto::new).collect(Collectors.toList());
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public LocalDateTime getDataCriacao() {
-        return dataCriacao;
+    public static Page<TopicoDto> converter(Page<Topico> topicos) {
+        return topicos.map(TopicoDto::new);
     }
 }

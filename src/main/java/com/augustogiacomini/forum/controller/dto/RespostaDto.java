@@ -1,9 +1,11 @@
 package com.augustogiacomini.forum.controller.dto;
 
 import com.augustogiacomini.forum.modelo.Resposta;
+import lombok.Getter;
 
 import java.time.LocalDateTime;
 
+@Getter
 public class RespostaDto {
 
     private Long id;
@@ -16,21 +18,5 @@ public class RespostaDto {
         this.mensagem = resposta.getMensagem();
         this.dataCriacao = resposta.getDataCriacao();
         this.nomeAutor = resposta.getAutor().getNome();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getMensagem() {
-        return mensagem;
-    }
-
-    public LocalDateTime getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public String getNomeAutor() {
-        return nomeAutor;
     }
 }
