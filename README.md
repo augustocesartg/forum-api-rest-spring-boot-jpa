@@ -1,0 +1,1 @@
+- Para acessar a documentação da API, devemos entrar no endereço http://localhost:8080/swagger-ui.html;
