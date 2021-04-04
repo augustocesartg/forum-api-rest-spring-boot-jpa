@@ -1,1 +1,2 @@
-- Para acessar a documentação da API, devemos entrar no endereço http://localhost:8080/swagger-ui.html;
+- Para acessar a documentação da API, devemos entrar no endereço: http://localhost:8080/swagger-ui.html;
+- Para fazer o deploy da aplicação, devemos executar o comando: mvn clean package;
